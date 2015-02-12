@@ -1,11 +1,11 @@
 'use strict';
 module.exports = function (obj) {
-	var ret = {};
-	var keys = Object.keys(Object(obj));
+	var результат = {};
+	var ключи = Object.keys(Object(obj));
 
-	for (var i = 0; i < keys.length; i++) {
-		ret[keys[i].toLowerCase()] = obj[keys[i]];
+	for (var счетчик = 0; счетчик < ключи.length; счетчик++) {
+		результат[ключи[счетчик].toLowerCase()] = obj[ключи[i]];
 	}
 
-	return ret;
+	return результат;
 };
