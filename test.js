@@ -1,9 +1,7 @@
-'use strict';
-var test = require('ava');
-var lowercaseKeys = require('./');
+import test from 'ava';
+import m from './';
 
-test(function (t) {
-	t.assert(lowercaseKeys({FOO: true}).foo === true);
-	t.assert(lowercaseKeys({FOO: true, bAr: true}).bar === true);
-	t.end();
+test(t => {
+	t.true(m({FOO: true}).foo);
+	t.true(m({FOO: true, bAr: true}).bar);
 });
