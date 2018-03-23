@@ -1,7 +1,7 @@
 import test from 'ava';
-import m from './';
+import m from '.';
 
-test(t => {
+test('main', t => {
 	t.true(m({FOO: true}).foo);
 	t.true(m({FOO: true, bAr: true}).bar);
 });
