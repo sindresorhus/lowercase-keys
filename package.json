@@ -13,10 +13,15 @@
 		"node": ">=6"
 	},
 	"scripts": {
-		"test": "xo && ava"
+		"lint": "tslint -p .",
+		"build": "tsc",
+		"test": "npm run lint && npm run build && ava dist/test.js",
+		"prepublish": "npm run build && rm dist/test.*"
 	},
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
 	"files": [
-		"index.js"
+		"dist"
 	],
 	"keywords": [
 		"object",
@@ -30,7 +35,11 @@
 		"key"
 	],
 	"devDependencies": {
+		"@types/node": "^10.12.20",
 		"ava": "*",
+		"tslint": "^5.12.1",
+		"tslint-xo": "^0.13.0",
+		"typescript": "^3.2.4",
 		"xo": "*"
 	}
 }
