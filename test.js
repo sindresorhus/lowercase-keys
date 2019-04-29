@@ -1,7 +1,7 @@
 import test from 'ava';
-import m from '.';
+import lowercaseKeys from '.';
 
 test('main', t => {
-	t.true(m({FOO: true}).foo);
-	t.true(m({FOO: true, bAr: true}).bar);
+	t.true(lowercaseKeys({FOO: true}).foo);
+	t.true(lowercaseKeys({FOO: true, bAr: true}).bar);
 });
