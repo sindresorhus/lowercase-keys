@@ -1,10 +1,10 @@
 'use strict';
 module.exports = object => {
-	const ret = {};
+	const result = {};
 
 	for (const [key, value] of Object.entries(object)) {
-		ret[key.toLowerCase()] = value;
+		result[key.toLowerCase()] = value;
 	}
 
-	return ret;
+	return result;
 };
