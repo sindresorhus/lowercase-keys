@@ -1,4 +1,4 @@
-# lowercase-keys [![Build Status](https://travis-ci.org/sindresorhus/lowercase-keys.svg?branch=master)](https://travis-ci.org/sindresorhus/lowercase-keys)
+# lowercase-keys
 
 > Lowercase the keys of an object
 
