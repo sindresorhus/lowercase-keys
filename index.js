@@ -1,10 +1,6 @@
 'use strict';
-module.exports = object => {
-	const result = {};
+const mapObj = require('map-obj');
 
-	for (const [key, value] of Object.entries(object)) {
-		result[key.toLowerCase()] = value;
-	}
-
-	return result;
+module.exports = (object, options) => {
+	return mapObj(object, (key, value) => [key.toLowerCase(), value], options);
 };
