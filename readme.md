@@ -2,13 +2,13 @@
 
 > Lowercase the keys of an object
 
+Check out [`map-obj`](https://github.com/sindresorhus/map-obj) if you need support for deep iteration.
 
 ## Install
 
 ```
 $ npm install lowercase-keys
 ```
-
 
 ## Usage
 
@@ -19,13 +19,11 @@ lowercaseKeys({FOO: true, bAr: false});
 //=> {foo: true, bar: false}
 ```
 
-
 ## API
 
 ### lowercaseKeys(object)
 
 Returns a new object with the keys lowercased.
-
 
 ## lowercase-keys for enterprise
 
