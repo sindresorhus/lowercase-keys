@@ -6,14 +6,14 @@ Check out [`map-obj`](https://github.com/sindresorhus/map-obj) if you need suppo
 
 ## Install
 
-```
-$ npm install lowercase-keys
+```sh
+npm install lowercase-keys
 ```
 
 ## Usage
 
 ```js
-const lowercaseKeys = require('lowercase-keys');
+import lowercaseKeys from 'lowercase-keys';
 
 lowercaseKeys({FOO: true, bAr: false});
 //=> {foo: true, bar: false}

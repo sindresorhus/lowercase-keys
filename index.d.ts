@@ -5,12 +5,10 @@ Lowercase the keys of an object.
 
 @example
 ```
-import lowercaseKeys = require('lowercase-keys');
+import lowercaseKeys from 'lowercase-keys';
 
 lowercaseKeys({FOO: true, bAr: false});
 //=> {foo: true, bar: false}
 ```
 */
-declare function lowercaseKeys<T>(object: {[key: string]: T}): {[key: string]: T};
-
-export = lowercaseKeys;
+export default function lowercaseKeys<T>(object: Record<string, T>): Record<string, T>;

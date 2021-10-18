@@ -1,5 +1,5 @@
 import {expectType} from 'tsd';
-import lowercaseKeys = require('.');
+import lowercaseKeys from './index.js';
 
-expectType<{[key: string]: boolean}>(lowercaseKeys({FOO: true, bAr: false}));
-expectType<{[key: string]: string | number}>(lowercaseKeys({foo: 'bar', baz: 1}));
+expectType<Record<string, boolean>>(lowercaseKeys({FOO: true, bAr: false})); // eslint-disable-line @typescript-eslint/naming-convention
+expectType<Record<string, string | number>>(lowercaseKeys({foo: 'bar', baz: 1}));
