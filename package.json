@@ -1,6 +1,6 @@
 {
 	"name": "lowercase-keys",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"description": "Lowercase the keys of an object",
 	"license": "MIT",
 	"repository": "sindresorhus/lowercase-keys",
