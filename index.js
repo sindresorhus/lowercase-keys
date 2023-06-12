@@ -1,8 +1,9 @@
 export default function lowercaseKeys(object) {
-	const objCopy = {};
-	const objList = Object.entries(object);
-	for (let index = 0; index < objList.length; index++) {
-		objCopy[objList[index][0].toLowerCase()] = objList[index][1];
+	const objectCopy = {};
+	const objectList = Object.entries(object);
+	for (const key of objectList) {
+		objectCopy[key[0].toLowerCase()] = key[1];
 	}
-	return objCopy;
+
+	return objectCopy;
 }
