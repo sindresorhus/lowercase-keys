@@ -1,4 +1,8 @@
 export default function lowercaseKeys(object, {onConflict} = {}) {
+	if (typeof object !== 'object' || object === null) {
+		throw new TypeError(`Expected an object, got ${object === null ? 'null' : typeof object}`);
+	}
+
 	const result = {};
 
 	for (const [key, value] of Object.entries(object)) {

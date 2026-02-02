@@ -6,6 +6,14 @@ test('main', t => {
 	t.true(lowercaseKeys({FOO: true, bAr: true}).bar);
 });
 
+test('throws on invalid input', t => {
+	t.throws(() => lowercaseKeys(null), {instanceOf: TypeError, message: 'Expected an object, got null'});
+	t.throws(() => lowercaseKeys(undefined), {instanceOf: TypeError, message: 'Expected an object, got undefined'});
+	t.throws(() => lowercaseKeys(123), {instanceOf: TypeError, message: 'Expected an object, got number'});
+	t.throws(() => lowercaseKeys('string'), {instanceOf: TypeError, message: 'Expected an object, got string'});
+	t.throws(() => lowercaseKeys(true), {instanceOf: TypeError, message: 'Expected an object, got boolean'});
+});
+
 test('prototype pollution - __proto__ is handled safely', t => {
 	const input = Object.fromEntries([['__proto__', {polluted: true}]]);
 	const result = lowercaseKeys(input);
